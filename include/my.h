@@ -146,9 +146,9 @@ void display_seagull_part(seagull_t *, my_w_t *, ctime_t *, bullet_t *);
 void replace_cross(redcross_t *, int, sfVector2f);
 void displayer(my_w_t *, seagull_t *, ctime_t *, bullet_t *);
 void destroy_and_free(my_w_t *, seagull_t *, ctime_t *, bullet_t *);
-void gettime(ctime_t *);
+void get_time(ctime_t *);
 void one_ammo_down(bullet_t *, seagull_t *, my_w_t *);
-void check_clicked_time1(seagull_t *, bullet_t *);
+void check_clicked_time1(seagull_t *);
 void replace_sprite(float, seagull_t *);
 void destroy_and_free_musics(seagull_t *, my_w_t *);
 

@@ -35,7 +35,7 @@ void event_on_click(sfVector2i *m_pos, seagull_t *target,
 	|| (m_pos->x <= px + 115 && m_pos->x >= px && target->speed.x < 0))
 	&& (m_pos->y >= py && m_pos->y <= py + 115)) {
 		replace_sprite(target->speed.x, target);
-		check_clicked_time1(target, ammo);
+		check_clicked_time1(target);
 		target->hits += 1;
 	}
 	one_ammo_down(ammo, target, window);

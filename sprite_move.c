@@ -6,7 +6,7 @@
 */
 #include "include/my.h"
 
-void move_rect(sfIntRect *rect, int speed, int max_value)
+void move_rect(sfIntRect *rect, int max_value)
 {
 	if (rect->left < max_value)
 		rect->left += 133;
@@ -48,7 +48,7 @@ void display_seagull_part(seagull_t *target, my_w_t *window,
 {
 	if (target->speed.x != 0 && fmod(clocker->seconds, 0.05) >= 0
 	&& fmod(clocker->seconds, 0.05) < 0.00001) {
-		move_rect(&target->rect, 0, 1064);
+		move_rect(&target->rect, 1064);
 		sfSprite_setTextureRect(target->sprite, target->rect);
 	}
 	analyse_events(window, target, ammo);

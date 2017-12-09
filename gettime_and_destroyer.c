@@ -6,7 +6,7 @@
 */
 #include "include/my.h"
 
-void gettime(ctime_t *clocker)
+void get_time(ctime_t *clocker)
 {
 	clocker->timer = sfClock_getElapsedTime(clocker->clock);
 	clocker->seconds = clocker->timer.microseconds / 1000000.0;

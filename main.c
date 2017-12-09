@@ -45,7 +45,7 @@ void separate_operations(ctime_t *clocker, my_w_t *window,
 	sfVector2i mouse_pos = {0, 0};
 	sfVector2f sprite_pos = {0, 0};
 
-	gettime(clocker);
+	get_time(clocker);
 	if (fmodf(clocker->seconds, 1.0/60.0) >= 0 &&
 	fmodf(clocker->seconds, 1.0/60.0) < 0.01) {
 		displayer(window, target, clocker, ammo);

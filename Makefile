@@ -19,13 +19,15 @@ NAME	=	my_hunter
 
 GFLAGS	=	-lc_graph_prog -L./lib/my -lmy
 
+CC	=	gcc -Wall -Wextra -Werror -W
+
 all:	prepare_lib $(NAME)
 
 prepare_lib:
 	make -C lib/my
 
 $(NAME):	$(OBJ)
-	gcc -o $(NAME) $(OBJ) $(GFLAGS) -lm -Wall -Werror -Wextra
+	$(CC) -o $(NAME) $(OBJ) $(GFLAGS) -lm
 
 clean:
 	make clean -C lib/my

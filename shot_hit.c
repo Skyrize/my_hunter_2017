@@ -22,7 +22,7 @@ void click_event_sprite_move(seagull_t *target, float x, float y)
 	sfSprite_setPosition(target->sprite, target->position);
 }
 
-void check_clicked_time3(seagull_t *target, bullet_t *ammo)
+void check_clicked_time3(seagull_t *target)
 {
 	sfColor color = sfColor_fromRGBA(150, 150, 255, 125);
 
@@ -41,7 +41,7 @@ void check_clicked_time3(seagull_t *target, bullet_t *ammo)
 	}
 }
 
-void check_clicked_time2(seagull_t *target, bullet_t *ammo)
+void check_clicked_time2(seagull_t *target)
 {
 	switch (target->hits % 6) {
 		case 3:
@@ -56,10 +56,10 @@ void check_clicked_time2(seagull_t *target, bullet_t *ammo)
 				4, (sfVector2f){1735.0, 735.0});
 			break;
 	}
-	check_clicked_time3(target, ammo);
+	check_clicked_time3(target);
 }
 
-void check_clicked_time1(seagull_t *target, bullet_t *ammo)
+void check_clicked_time1(seagull_t *target)
 {
 	switch (target->hits % 6) {
 		case 0:
@@ -79,5 +79,5 @@ void check_clicked_time1(seagull_t *target, bullet_t *ammo)
 				2, (sfVector2f){1735.0, 415.0});
 			break;
 	}
-	check_clicked_time2(target, ammo);
+	check_clicked_time2(target);
 }
