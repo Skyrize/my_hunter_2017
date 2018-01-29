@@ -17,7 +17,7 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	my_hunter
 
-GFLAGS	=	-lc_graph_prog -L./lib/my -lmy
+GFLAGS	=	-lcsfml-graphics -lcsfml-audio -lcsfml-system -lcsfml-window -L./lib/my -lmy
 
 CC	=	gcc -Wall -Wextra -Werror -W
 
